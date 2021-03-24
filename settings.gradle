@@ -1,0 +1,10 @@
+include ':module_common'
+include ':module_provider'
+include ':module_player'
+include ':module_user'
+include ':module_hot'
+include ':module_home'
+include ':module_discover'
+include ':module_daily'
+include ':app'
+rootProject.name = "Eyepetizer"
