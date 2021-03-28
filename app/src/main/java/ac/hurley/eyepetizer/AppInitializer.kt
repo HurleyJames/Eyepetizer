@@ -23,7 +23,7 @@ class AppInitializer : Initializer<Unit> {
         if (BuildConfig.DEBUG) {
             ARouter.openDebug()
         }
-        Configurator.instance.withWebApiHost("http://baobab.kaiyanapp.com/api").configure()
+        Configurator.instance.withWebApiHost("http://baobab.kaiyanapp.com/api/").configure()
         MMKV.initialize(context)
         ARouter.init(context.applicationContext as Application)
     }

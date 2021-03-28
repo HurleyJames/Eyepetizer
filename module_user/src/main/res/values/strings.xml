@@ -9,5 +9,6 @@
     <string name="user_view_history">观看记录</string>
     <string name="user_feedback">意见反馈</string>
     <string name="user_contributions">我要投稿</string>
+    <string name="user_setting">设置</string>
     <string name="user_about">关于</string>
 </resources>
