@@ -9,7 +9,7 @@ import retrofit2.http.Url
  *      @author hurley
  *      date    : 3/28/21 3:29 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 日报界面的请求 API 地址
  * </pre>
  */
 interface DailyApi {
