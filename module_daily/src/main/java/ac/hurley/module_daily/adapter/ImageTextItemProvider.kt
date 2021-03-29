@@ -4,6 +4,7 @@ import ac.hurley.module_common.util.ShareUtils
 import ac.hurley.module_daily.R
 import ac.hurley.module_daily.databinding.DailyItemImageTextBinding
 import ac.hurley.module_daily.model.TypeMultiModel
+import ac.hurley.module_provider.router.jumpToVideoPlayer
 import android.app.Activity
 import com.chad.library.adapter.base.provider.BaseItemProvider
 import com.chad.library.adapter.base.viewholder.BaseDataBindingHolder
@@ -29,7 +30,7 @@ class ImageTextItemProvider(private val mActivity: Activity) : BaseItemProvider<
         val bindingHolder = BaseDataBindingHolder<DailyItemImageTextBinding>(helper.itemView)
         bindingHolder.dataBinding?.model = model
         bindingHolder.dataBinding?.ivCover?.setOnClickListener {
-            // TODO
+            jumpToVideoPlayer(mActivity, it, model.item?.data!!)
         }
         bindingHolder.dataBinding?.tvShare?.setOnClickListener {
             ShareUtils.shareText(mActivity, model.item!!.data.playUrl)

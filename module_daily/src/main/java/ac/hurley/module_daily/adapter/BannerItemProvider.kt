@@ -3,6 +3,7 @@ package ac.hurley.module_daily.adapter
 import ac.hurley.module_daily.R
 import ac.hurley.module_daily.databinding.DailyItemBannerBinding
 import ac.hurley.module_daily.model.TypeMultiModel
+import ac.hurley.module_provider.router.jumpToVideoPlayer
 import android.app.Activity
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.LifecycleOwner
@@ -20,7 +21,8 @@ import com.youth.banner.indicator.CircleIndicator
  *      desc    : 轮播图的 Provider 类
  * </pre>
  */
-class BannerItemProvider(private val owner: LifecycleOwner, private val activity: Activity) : BaseItemProvider<TypeMultiModel>() {
+class BannerItemProvider(private val owner: LifecycleOwner, private val activity: Activity) :
+    BaseItemProvider<TypeMultiModel>() {
 
 
     override val itemViewType: Int
@@ -49,7 +51,7 @@ class BannerItemProvider(private val owner: LifecycleOwner, private val activity
                 addBannerLifecycleObserver(owner)
                 indicator = CircleIndicator(banner.context)
                 setOnBannerListener { _, position ->
-
+                    jumpToVideoPlayer(activity, null, data.items[position].data, true)
                 }
             }
         }
