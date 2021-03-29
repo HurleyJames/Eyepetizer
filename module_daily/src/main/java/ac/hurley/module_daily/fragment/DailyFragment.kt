@@ -43,7 +43,7 @@ class DailyFragment : BaseMVVMFragment<DailyViewModel>() {
 
         mAdapter.loadMoreModule.setOnLoadMoreListener {
             mIsLoadMore = true
-            // TODO
+            getDailyList()
         }
     }
 
@@ -51,10 +51,36 @@ class DailyFragment : BaseMVVMFragment<DailyViewModel>() {
         srl_daily.isRefreshing = false
     }
 
+    /**
+     * 懒加载数据
+     */
     override fun lazyLoadData() {
+        // 对于轮播图这种数据可以选择懒加载
         mViewModel.getDailyBanner().observe(viewLifecycleOwner) {
             mAdapter.setList(mutableListOf())
             mAdapter.addData(it)
+        }
+    }
+
+    private fun getDailyList() {
+        // 获取日报列表数据
+        mViewModel.getDailyList().observe(viewLifecycleOwner) {
+            if (it.isNotEmpty()) {
+                if (mIsLoadMore) {
+                    mAdapter.addData(it)
+                    mAdapter.loadMoreModule.loadMoreComplete()
+                } else {
+                    mAdapter.setList(it)
+                }
+            } else {
+                mAdapter.loadMoreModule.loadMoreEnd()
+            }
+        }
+    }
+
+    override fun handlerError() {
+        if (mIsLoadMore) {
+            mAdapter.loadMoreModule.loadMoreFail()
         }
     }
 }
