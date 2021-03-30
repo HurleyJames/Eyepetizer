@@ -32,6 +32,7 @@ object RouterPath {
     class User {
         companion object {
             const val PATH_USER_HOME = "/user/home"
+            const val PATH_USER_SETTING = "/user/setting"
         }
     }
 

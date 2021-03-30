@@ -2,5 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ac.hurley.module_user">
 
-
+    <application>
+        <activity
+            android:name=".SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/User_SettingTheme" />
+    </application>
 </manifest>

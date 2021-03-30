@@ -1,0 +1,256 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="ac.hurley.module_user.viewmodel.SettingViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".SettingActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/user_setting"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold" />
+
+            <ac.hurley.module_common.view.IconFontTextView
+                android:id="@+id/tv_daily_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="@dimen/dp_15"
+                android:text="@string/user_back_icon"
+                android:textSize="@dimen/sp_18" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/ll_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:onClick="@{(view) -> viewModel.onClick(view)}"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_23"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:text="@string/daily_update_hint"
+                    android:textSize="@dimen/sp_12" />
+
+                <RadioGroup
+                    android:id="@+id/rg_daily_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_daily_open"
+                        style="@style/SettingRadioButton"
+                        android:checked="@={viewModel.rbDailySwitch}"
+                        android:text="@string/setting_open" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_9"
+                        android:layout_marginEnd="@dimen/dp_9"
+                        android:text="@string/split_line"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_daily_close"
+                        style="@style/SettingRadioButton"
+                        android:checked="@={!viewModel.rbDailySwitch}"
+                        android:text="@string/setting_close" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_23"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:text="@string/wifi_auto_play"
+                    android:textSize="@dimen/sp_12" />
+
+                <RadioGroup
+                    android:id="@+id/rg_wifi_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_wifi_open"
+                        style="@style/SettingRadioButton"
+                        android:checked="@={viewModel.rbWifiSwitch}"
+                        android:text="@string/setting_open" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_9"
+                        android:layout_marginEnd="@dimen/dp_9"
+                        android:text="@string/split_line"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_wifi_close"
+                        style="@style/SettingRadioButton"
+                        android:checked="@={!viewModel.rbWifiSwitch}"
+                        android:text="@string/setting_close" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_23"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:text="@string/translate"
+                    android:textSize="@dimen/sp_12" />
+
+                <RadioGroup
+                    android:id="@+id/rg_translate_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_translate_open"
+                        style="@style/SettingRadioButton"
+                        android:checked="@={viewModel.rbTranslateSwitch}"
+                        android:text="@string/setting_open" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_9"
+                        android:layout_marginEnd="@dimen/dp_9"
+                        android:text="@string/split_line"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_translate_close"
+                        style="@style/SettingRadioButton"
+                        android:checked="@={!viewModel.rbTranslateSwitch}"
+                        android:text="@string/setting_close" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tv_clear_cache"
+                    style="@style/SettingTextView"
+                    android:onClick="@{(view) -> viewModel.onClick(view)}"
+                    android:text="@string/clear_all_cache" />
+
+                <TextView
+                    android:id="@+id/tv_cache_path"
+                    style="@style/SettingTextView"
+                    android:onClick="@{(view) -> viewModel.onClick(view)}"
+                    android:text="@string/setting_cache_path" />
+
+                <TextView
+                    android:id="@+id/tv_play_definition"
+                    style="@style/SettingTextView"
+                    android:onClick="@{(view) -> viewModel.onClick(view)}"
+                    android:text="@string/setting_play_definition" />
+
+                <TextView
+                    android:id="@+id/tv_cache_definition"
+                    style="@style/SettingTextView"
+                    android:onClick="@{(view) -> viewModel.onClick(view)}"
+                    android:text="@string/setting_cache_definition" />
+
+                <TextView
+                    android:id="@+id/tv_check_version"
+                    style="@style/SettingTextView"
+                    android:onClick="@{(view) -> viewModel.onClick(view)}"
+                    android:text="@string/check_version" />
+
+                <TextView
+                    android:id="@+id/tv_user_agreement"
+                    style="@style/SettingTextView"
+                    android:onClick="@{(view) -> viewModel.onClick(view)}"
+                    android:text="@string/user_agreement" />
+
+                <TextView
+                    android:id="@+id/tv_legal_notices"
+                    style="@style/SettingTextView"
+                    android:onClick="@{(view) -> viewModel.onClick(view)}"
+                    android:text="@string/legal_notices" />
+
+                <TextView
+                    android:id="@+id/tv_video_function"
+                    style="@style/SettingTextView"
+                    android:onClick="@{(view) -> viewModel.onClick(view)}"
+                    android:text="@string/video_fun_statement" />
+
+                <TextView
+                    android:id="@+id/tv_copyright"
+                    style="@style/SettingTextView"
+                    android:onClick="@{(view) -> viewModel.onClick(view)}"
+                    android:text="@string/copyright_report" />
+
+                <TextView
+                    android:id="@+id/tv_slogan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:onClick="@{(view) -> viewModel.onClick(view)}"
+                    android:text="@string/app_slogan"
+                    android:textColor="@color/user_slogan"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_marginBottom="@dimen/dp_80"
+                    android:onClick="@{(view) -> viewModel.onClick(view)}"
+                    android:text="@string/app_slogan_description"
+                    android:textColor="@color/user_slogan"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

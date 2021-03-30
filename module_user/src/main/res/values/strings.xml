@@ -11,4 +11,28 @@
     <string name="user_contributions">我要投稿</string>
     <string name="user_setting">设置</string>
     <string name="user_about">关于</string>
+    <string name="user_settings_icon">&#xe645;</string>
+    <string name="user_back_icon">&#58933;</string>
+
+
+    <string name="split_line">|</string>
+
+    <string name="app_slogan">- Your contribution is highly appreciated! -</string>
+    <string name="app_slogan_description">让每一个人都开眼，开了又开。</string>
+
+    <!-- 设置 -->
+    <string name="daily_update_hint">日报更新提醒</string>
+    <string name="setting_open">打开</string>
+    <string name="setting_close">关闭</string>
+    <string name="wifi_auto_play">Wifi 下自动播放</string>
+    <string name="translate">翻译</string>
+    <string name="clear_all_cache">清除所有缓存</string>
+    <string name="setting_cache_path">选择缓存路径</string>
+    <string name="setting_play_definition">选择播放清晰度</string>
+    <string name="setting_cache_definition">选择缓存清晰度</string>
+    <string name="check_version">检查版本更新</string>
+    <string name="user_agreement">用户协议</string>
+    <string name="legal_notices">隐私政策</string>
+    <string name="video_fun_statement">视频功能声明</string>
+    <string name="copyright_report">版权举报</string>
 </resources>
