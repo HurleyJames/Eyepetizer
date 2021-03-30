@@ -59,6 +59,10 @@ abstract class DiscoverListFragment<VM : DiscoverListViewModel, T> : BaseMVVMFra
         }
     }
 
+    override fun lazyLoadData() {
+        getListData(true)
+    }
+
     private fun getListData(firstPage: Boolean = false) {
         mViewModel.getListData<T>(firstPage).observe(viewLifecycleOwner) {
             if (it.isNotEmpty()) {

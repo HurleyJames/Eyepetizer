@@ -19,7 +19,6 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
 class TopicAdapter : BaseQuickAdapter<TopicItemModel, BaseViewHolder>(R.layout.discover_topic_item),
     LoadMoreModule {
 
-
     override fun convert(holder: BaseViewHolder, item: TopicItemModel) {
         val bindingHolder = BaseDataBindingHolder<DiscoverTopicItemBinding>(holder.itemView)
         bindingHolder.dataBinding?.model = item

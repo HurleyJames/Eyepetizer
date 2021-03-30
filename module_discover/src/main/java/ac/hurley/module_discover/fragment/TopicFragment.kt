@@ -3,6 +3,7 @@ package ac.hurley.module_discover.fragment
 import ac.hurley.module_discover.adapter.TopicAdapter
 import ac.hurley.module_discover.model.TopicItemModel
 import ac.hurley.module_discover.model.TopicListModel
+import ac.hurley.module_discover.viewmodel.TopicViewModel
 import android.view.View
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
@@ -15,7 +16,7 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
  *      desc    :
  * </pre>
  */
-class TopicFragment : DiscoverListFragment<TopicListModel, TopicItemModel>() {
+class TopicFragment : DiscoverListFragment<TopicViewModel, TopicItemModel>() {
 
 
     override fun getAdapter(): BaseQuickAdapter<TopicItemModel, BaseViewHolder> = TopicAdapter()

@@ -1,9 +1,11 @@
 package ac.hurley.module_discover.api
 
 import ac.hurley.module_discover.model.CategoryModel
+import ac.hurley.module_discover.model.TopicDetailModel
 import ac.hurley.module_discover.model.TopicModel
 import ac.hurley.module_provider.model.Issue
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Url
 
 /**
@@ -27,4 +29,7 @@ interface DiscoverApi {
 
     @GET
     suspend fun getTopicList(@Url url: String): TopicModel
+
+    @GET("v3/lightTopics/internal/{id}")
+    suspend fun getTopicDetail(@Path("id") id: Int): TopicDetailModel
 }

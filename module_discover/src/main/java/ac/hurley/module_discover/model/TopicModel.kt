@@ -5,7 +5,7 @@ package ac.hurley.module_discover.model
  *      @author hurley
  *      date    : 3/30/21 5:01 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 发现页面中主题版块的实体类
  * </pre>
  */
 data class TopicModel(
