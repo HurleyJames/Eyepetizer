@@ -21,11 +21,12 @@
     <string name="app_slogan_description">让每一个人都开眼，开了又开。</string>
 
     <!-- 设置 -->
-    <string name="daily_update_hint">日报更新提醒</string>
+    <string name="daily_update_hint">- 日报更新提醒- </string>
     <string name="setting_open">打开</string>
     <string name="setting_close">关闭</string>
-    <string name="wifi_auto_play">Wifi 下自动播放</string>
-    <string name="translate">翻译</string>
+    <string name="wifi_auto_play">- Wi-Fi 自动播放 -</string>
+    <string name="mobile_network_auto_play">- 移动网络 自动播放 -</string>
+    <string name="translate">- 翻译 -</string>
     <string name="clear_all_cache">清除所有缓存</string>
     <string name="setting_cache_path">选择缓存路径</string>
     <string name="setting_play_definition">选择播放清晰度</string>

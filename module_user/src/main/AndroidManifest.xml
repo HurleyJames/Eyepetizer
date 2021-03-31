@@ -4,8 +4,10 @@
 
     <application>
         <activity
-            android:name=".SettingActivity"
+            android:name=".activity.SettingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/User_SettingTheme" />
+
+        <activity android:name="ac.hurley.module_common.base.activity.WebViewActivity" />
     </application>
 </manifest>

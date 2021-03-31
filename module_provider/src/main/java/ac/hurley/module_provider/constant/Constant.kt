@@ -16,4 +16,6 @@ object Constant {
     const val SHARED_IMAGE_NAME = "shared_image"
     const val WATCH_VIDEO_EVENT = "watch_video_event"
     const val VIDEO_AUTO_PLAY_EVENT = "video_auto_play_event"
+
+    const val USER_AGREEMENT = "http://www.eyepetizer.net/agreement.html"
 }

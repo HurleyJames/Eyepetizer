@@ -2,6 +2,7 @@ package ac.hurley.module_common.base.app
 
 import android.annotation.SuppressLint
 import android.app.Application
+import android.content.Context
 
 /**
  * <pre>
@@ -13,6 +14,7 @@ import android.app.Application
  */
 
 object AppGlobal {
+
     private var mApplication: Application? = null
         @SuppressLint("PrivateApi")
         get() {
@@ -25,4 +27,5 @@ object AppGlobal {
         }
 
     fun get(): Application? = mApplication
+
 }

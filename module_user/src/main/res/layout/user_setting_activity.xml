@@ -1,5 +1,4 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="ResourceName">
 
@@ -15,7 +14,7 @@
         android:layout_height="match_parent"
         android:background="@color/white"
         android:orientation="vertical"
-        tools:context=".SettingActivity">
+        tools:context=".activity.SettingActivity">
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
@@ -131,6 +130,46 @@
                         android:id="@+id/rb_wifi_close"
                         style="@style/SettingRadioButton"
                         android:checked="@={!viewModel.rbWifiSwitch}"
+                        android:text="@string/setting_close" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_23"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:text="@string/mobile_network_auto_play"
+                    android:textSize="@dimen/sp_12" />
+
+                <RadioGroup
+                    android:id="@+id/rg_mobile_network_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_mobile_network_open"
+                        style="@style/SettingRadioButton"
+                        android:checked="@={viewModel.rbMobileNetworkSwitch}"
+                        android:text="@string/setting_open" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_9"
+                        android:layout_marginEnd="@dimen/dp_9"
+                        android:text="@string/split_line"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_mobile_network_close"
+                        style="@style/SettingRadioButton"
+                        android:checked="@={!viewModel.rbMobileNetworkSwitch}"
                         android:text="@string/setting_close" />
 
                 </RadioGroup>
