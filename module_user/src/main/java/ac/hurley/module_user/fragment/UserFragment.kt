@@ -31,7 +31,14 @@ class UserFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        iv_user_settings.setOnClickListener {
+
+        // 点击通知
+        iv_user_notifications.setOnClickListener {
+            ARouter.getInstance().build(RouterPath.User.PATH_USER_NOTIFICATION).navigation()
+        }
+
+        // 点击设置
+        tv_setting.setOnClickListener {
             ARouter.getInstance().build(RouterPath.User.PATH_USER_SETTING).navigation()
         }
     }

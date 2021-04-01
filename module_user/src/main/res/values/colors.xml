@@ -5,6 +5,7 @@
     <color name="colorTextPrimaryDark">#333333</color>
 
     <color name="grayDark">#adadad</color>
+    <color name="blue">#4687d7</color>
 
     <color name="user_red_normal">#FF0000</color>
     <color name="user_red_pressed">#FF6666</color>

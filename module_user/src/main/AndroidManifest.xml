@@ -8,6 +8,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/User_SettingTheme" />
 
+        <activity
+            android:name=".activity.NotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/User_SettingTheme" />
+
         <activity android:name="ac.hurley.module_common.base.activity.WebViewActivity" />
     </application>
 </manifest>

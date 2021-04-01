@@ -33,6 +33,7 @@ object RouterPath {
         companion object {
             const val PATH_USER_HOME = "/user/home"
             const val PATH_USER_SETTING = "/user/setting"
+            const val PATH_USER_NOTIFICATION = "/user/notification"
         }
     }
 

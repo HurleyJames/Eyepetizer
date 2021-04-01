@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="user_login">登录</string>
     <string name="user_go_homepage">查看个人主页 ></string>
     <string name="user_collection">收藏</string>
     <string name="user_comment">评论</string>
@@ -36,4 +37,20 @@
     <string name="legal_notices">隐私政策</string>
     <string name="video_fun_statement">视频功能声明</string>
     <string name="copyright_report">版权举报</string>
+
+    <!-- 通知 -->
+    <string-array name="user_notifications">
+        <item>@string/notification_push</item>
+        <item>@string/notification_interaction</item>
+        <item>@string/notification_inbox</item>
+    </string-array>
+    <string name="notification_push">推送</string>
+    <string name="notification_interaction">互动</string>
+    <string name="notification_inbox">私信</string>
+
+    <!-- 登录 -->
+    <string name="guide_login_tips_one">登录后即可查看评论回复、点赞及关注等通知信息</string>
+    <string name="guide_login_tips_two">别错过重要的信息</string>
+    <string name="guide_login_tips_three">点击登录后可关注主题和作者</string>
+
 </resources>
