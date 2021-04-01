@@ -46,21 +46,33 @@ class SettingViewModel : ViewModel() {
                 infoToast(getString(R.string.feature_not_supported))
             }
             R.id.tv_user_agreement -> {
-                WebViewActivity.start(view.context, getString(R.string.user_agreement), Constant.USER_AGREEMENT, false)
+                WebViewActivity.start(
+                    view.context,
+                    getString(R.string.user_agreement),
+                    Constant.USER_AGREEMENT,
+                    false
+                )
             }
             R.id.tv_check_version -> {
                 infoToast(getString(R.string.feature_not_supported))
             }
             R.id.tv_legal_notices -> {
-                infoToast(getString(R.string.feature_not_supported))
+                WebViewActivity.start(
+                    view.context,
+                    getString(R.string.legal_notices),
+                    Constant.LEGAL_NOTICES,
+                    false
+                )
             }
             R.id.tv_video_function, R.id.tv_copyright -> {
-                infoToast(getString(R.string.feature_not_supported))
+                WebViewActivity.start(
+                    view.context,
+                    getString(R.string.video_fun_statement),
+                    Constant.VIDEO_FUNCTION_STATEMENT,
+                    false
+                )
             }
             R.id.tv_slogan, R.id.tv_description -> {
-                infoToast(getString(R.string.feature_not_supported))
-            }
-            R.id.ll_settings -> {
                 infoToast(getString(R.string.feature_not_supported))
             }
             else -> {
