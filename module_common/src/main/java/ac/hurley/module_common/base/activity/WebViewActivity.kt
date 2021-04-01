@@ -1,9 +1,9 @@
 package ac.hurley.module_common.base.activity
 
 import ac.hurley.module_common.R
-import ac.hurley.module_common.ext.setToolBar
 import ac.hurley.module_common.net.AgentWebObserver
 import ac.hurley.module_common.util.immersionStatusBar
+import ac.hurley.module_common.util.setToolBar
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle

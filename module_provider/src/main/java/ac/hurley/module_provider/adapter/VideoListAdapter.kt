@@ -1,8 +1,8 @@
-package ac.hurley.module_hot.adapter
+package ac.hurley.module_provider.adapter
 
 import ac.hurley.module_common.util.ShareUtils
-import ac.hurley.module_hot.R
-import ac.hurley.module_hot.databinding.HotItemRankListBinding
+import ac.hurley.module_provider.R
+import ac.hurley.module_provider.databinding.VideoListItemBinding
 import ac.hurley.module_provider.model.Item
 import ac.hurley.module_provider.router.jumpToVideoPlayer
 import android.app.Activity
@@ -16,14 +16,14 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
  *      @author hurley
  *      date    : 3/29/21 10:38 PM
  *      github  : https://github.com/HurleyJames
- *      desc    : 热门排行榜适配器类
+ *      desc    : 视频列表适配器类
  * </pre>
  */
-class HotRankListAdapter(private val mActivity: Activity) :
-    BaseQuickAdapter<Item, BaseViewHolder>(R.layout.hot_item_rank_list), LoadMoreModule {
+class VideoListAdapter(private val mActivity: Activity) :
+    BaseQuickAdapter<Item, BaseViewHolder>(R.layout.video_list_item), LoadMoreModule {
 
     override fun convert(holder: BaseViewHolder, item: Item) {
-        val bindingHolder = BaseDataBindingHolder<HotItemRankListBinding>(holder.itemView)
+        val bindingHolder = BaseDataBindingHolder<VideoListItemBinding>(holder.itemView)
         bindingHolder.dataBinding?.model = item
         bindingHolder.dataBinding?.ivCover?.setOnClickListener { ivCover ->
             jumpToVideoPlayer(
@@ -33,6 +33,9 @@ class HotRankListAdapter(private val mActivity: Activity) :
             )
         }
 
+        /**
+         * 分享该视频
+         */
         bindingHolder.dataBinding?.tvShare?.setOnClickListener {
             ShareUtils.shareText(mActivity, item.data.playUrl)
         }

@@ -2,7 +2,7 @@ package ac.hurley.module_hot.fragment
 
 import ac.hurley.module_common.base.fragment.BaseMVVMFragment
 import ac.hurley.module_hot.R
-import ac.hurley.module_hot.adapter.HotRankListAdapter
+import ac.hurley.module_provider.adapter.VideoListAdapter
 import ac.hurley.module_hot.viewmodel.HotViewModel
 import android.os.Bundle
 import androidx.lifecycle.observe
@@ -21,7 +21,11 @@ class HotRankListFragment : BaseMVVMFragment<HotViewModel>() {
 
     // 排行榜页面只显示相应数量的热门视频，所以并不支持加载更多，只需要支持下拉刷新即可
 
-    private val mAdapter by lazy { HotRankListAdapter(mActivity) }
+    private val mAdapter by lazy {
+        VideoListAdapter(
+            mActivity
+        )
+    }
 
     companion object {
         const val API_URL_KEY = "api_url"

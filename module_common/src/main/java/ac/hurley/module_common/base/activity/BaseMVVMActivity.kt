@@ -36,11 +36,11 @@ abstract class BaseMVVMActivity<VM : BaseViewModel> : AppCompatActivity() {
         initEvent()
     }
 
-    private fun initViewModel() {
+    open fun setLayout() {
         setContentView(getLayoutRes)
     }
 
-    open fun setLayout() {
+    private fun initViewModel() {
         val parameterizedType = javaClass.genericSuperclass as ParameterizedType
         mViewModel = ViewModelProvider(this)[parameterizedType.actualTypeArguments[0] as Class<VM>]
         mViewModel.mStateLiveData.observe(this) { state ->

@@ -20,3 +20,14 @@ fun AppCompatActivity.setToolBar(toolbar: Toolbar) {
         onBackPressed()
     }
 }
+
+
+fun AppCompatActivity.setToolBar(toolbar: Toolbar, title: String) {
+    setSupportActionBar(toolbar)
+    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    supportActionBar?.setHomeButtonEnabled(true)
+    toolbar.setNavigationOnClickListener {
+        onBackPressed()
+    }
+    toolbar.title = title
+}

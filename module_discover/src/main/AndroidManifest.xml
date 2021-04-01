@@ -2,5 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ac.hurley.module_discover">
 
+    <application>
+
+        <activity
+            android:name=".activity.CategoryDetailActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
 
 </manifest>

@@ -27,7 +27,7 @@ abstract class BaseMVVMFragment<VM : BaseViewModel> : BaseFragment() {
     }
 
     private fun initViewModel() {
-        var parameterizedType = javaClass.genericSuperclass as ParameterizedType
+        val parameterizedType = javaClass.genericSuperclass as ParameterizedType
         mViewModel = ViewModelProvider(this)[parameterizedType.actualTypeArguments[0] as Class<VM>]
         mViewModel.mStateLiveData.observe(viewLifecycleOwner) { state ->
             when (state) {

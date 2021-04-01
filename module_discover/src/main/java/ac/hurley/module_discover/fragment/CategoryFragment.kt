@@ -2,6 +2,7 @@ package ac.hurley.module_discover.fragment
 
 import ac.hurley.module_common.base.fragment.BaseMVVMFragment
 import ac.hurley.module_discover.R
+import ac.hurley.module_discover.activity.CategoryDetailActivity
 import ac.hurley.module_discover.adapter.CategoryAdapter
 import ac.hurley.module_discover.viewmodel.CategoryViewModel
 import android.util.TypedValue
@@ -57,6 +58,12 @@ class CategoryFragment : BaseMVVMFragment<CategoryViewModel>(), OnItemClickListe
     }
 
     override fun onItemClick(adapter: BaseQuickAdapter<*, *>, view: View, position: Int) {
-
+        CategoryDetailActivity.start(
+            mActivity,
+            mAdapter.data[position].id,
+            mAdapter.data[position].name,
+            mAdapter.data[position].headerImage,
+            view.findViewById(R.id.fl_content)
+        )
     }
 }
