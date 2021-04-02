@@ -4,15 +4,16 @@
 
     <application>
         <activity
-            android:name=".HomeActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Home_LaunchTheme">
+            android:name=".SplashActivity"
+            android:theme="@style/Home_Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".HomeActivity" />
     </application>
 
 </manifest>

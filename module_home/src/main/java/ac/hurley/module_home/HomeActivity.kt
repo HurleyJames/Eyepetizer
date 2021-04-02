@@ -3,6 +3,8 @@ package ac.hurley.module_home
 import ac.hurley.module_common.util.immersionStatusBar
 import ac.hurley.module_common.util.infoToast
 import ac.hurley.module_provider.router.RouterPath
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +13,9 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
+import com.blankj.utilcode.util.LogUtils
 import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback
 import kotlinx.android.synthetic.main.home_activity.*
 
@@ -140,5 +144,11 @@ class HomeActivity : AppCompatActivity() {
         return super.onKeyDown(keyCode, event)
     }
 
+    companion object {
+        fun start(context: Context) {
+            LogUtils.e("2")
+            context.startActivity(Intent(context, HomeActivity::class.java))
+        }
+    }
 
 }

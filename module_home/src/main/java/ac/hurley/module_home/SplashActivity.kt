@@ -1,13 +1,17 @@
 package ac.hurley.module_home
 
 import ac.hurley.module_common.base.activity.BaseActivity
+import ac.hurley.module_provider.router.RouterPath
 import android.Manifest
 import android.os.Bundle
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
+import com.alibaba.android.arouter.launcher.ARouter
+import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.SPUtils
 import com.permissionx.guolindev.PermissionX
+import kotlinx.android.synthetic.main.splash_activity.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -52,7 +56,8 @@ class SplashActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestWriteExternalStoragePermission()
+        setContentView(R.layout.splash_activity)
+//        requestWriteExternalStoragePermission()
     }
 
     override fun onDestroy() {
@@ -62,11 +67,11 @@ class SplashActivity : BaseActivity() {
 
     override fun setupViews() {
         super.setupViews()
-//        iv_slogan.startAnimation(alphaAnimation)
-//        iv_splash.startAnimation(scaleAnimation)
+        iv_slogan.startAnimation(alphaAnimation)
+        iv_splash.startAnimation(scaleAnimation)
         CoroutineScope(job).launch {
             delay(mSplashDuration)
-//            ARouter.getInstance().build(RouterPath.PATH_HOME).navigation()
+            HomeActivity.start(this@SplashActivity)
         }
         isFirstOpenApp = false
     }

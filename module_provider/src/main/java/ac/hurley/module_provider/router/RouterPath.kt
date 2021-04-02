@@ -11,6 +11,12 @@ package ac.hurley.module_provider.router
 
 object RouterPath {
 
+    class Home {
+        companion object {
+            const val PATH_HOME = "/home"
+        }
+    }
+
     class Daily {
         companion object {
             const val PATH_DAILY_HOME = "/daily/home"

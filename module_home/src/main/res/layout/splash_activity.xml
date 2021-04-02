@@ -7,14 +7,14 @@
     tools:ignore="ResourceName">
 
     <ImageView
-        android:id="@+id/ivSplashPicture"
+        android:id="@+id/iv_splash"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
         android:src="@drawable/bg_splash" />
 
     <ImageView
-        android:id="@+id/ivSlogan"
+        android:id="@+id/iv_slogan"
         android:layout_width="150dp"
         android:layout_height="56dp"
         android:layout_centerHorizontal="true"
