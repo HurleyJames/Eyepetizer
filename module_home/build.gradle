@@ -1,6 +1,11 @@
 apply from: "../common.config.gradle"
+apply plugin: 'kotlin-android'
 
 android {
 
     resourcePrefix "home_"
+}
+
+dependencies {
+    implementation 'com.permissionx.guolindev:permissionx:1.2.2'
 }

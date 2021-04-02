@@ -4,4 +4,14 @@
     <string name="home_hot">热门</string>
     <string name="home_person">我的</string>
     <string name="home_exit_tips">再按一次退出程序</string>
+
+    <string name="splash_slogan">FEED YOU EYES. FEED YOUR SOUL</string>
+    <string name="splash_slogan_description">开眼，看更好的世界</string>
+
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="settings">设置</string>
+
+    <string name="permission_picture">需要存储权限来处理您的图片信息</string>
+    <string name="permission_access_phone">需要访问手机识别码等信息</string>
 </resources>
