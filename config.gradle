@@ -6,7 +6,7 @@ ext {
             targetSdkVersion : 30,
             applicationId    : "ac.hurley.eyepetizer",
             versionCode      : 1,
-            versionName      : "0.1",
+            versionName      : "1.0",
     ]
 
     androidx = [

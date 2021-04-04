@@ -146,7 +146,6 @@ class HomeActivity : AppCompatActivity() {
 
     companion object {
         fun start(context: Context) {
-            LogUtils.e("2")
             context.startActivity(Intent(context, HomeActivity::class.java))
         }
     }

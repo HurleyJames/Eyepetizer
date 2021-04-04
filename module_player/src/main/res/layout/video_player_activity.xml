@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+
+    <data>
+
+        <import type="ac.hurley.module_common.util.DateUtils" />
+
+        <import type="ac.hurley.module_player.util.BlurredUtils" />
+
+        <variable
+            name="videoModel"
+            type="ac.hurley.module_provider.model.Data" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.VideoPlayerActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_video_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            bind:url="@{BlurredUtils.INSTANCE.buildBlurred(videoModel.cover.blurred)}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fl_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_250" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/srl_video_player"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="@{videoModel.title}"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/sp_18"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="@{`#` + videoModel.category + ` / ` + DateUtils.INSTANCE.formatDateMsByYMDHM(videoModel.author.latestReleaseTime)}"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/sp_12" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:text="@{videoModel.description}"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/sp_14" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:gravity="start|center"
+                            android:paddingBottom="@dimen/dp_10">
+
+                            <ac.hurley.module_common.view.IconFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:text="@string/icon_love_text"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_20" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_3"
+                                android:text="@{String.valueOf(videoModel.consumption.collectionCount)}"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_13" />
+
+                            <ac.hurley.module_common.view.IconFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_30"
+                                android:text="@string/player_icon_share_text"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_18" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_3"
+                                android:text="@{String.valueOf(videoModel.consumption.shareCount)}"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_13" />
+
+                            <ac.hurley.module_common.view.IconFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_30"
+                                android:text="@string/icon_comment_text"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_20" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_3"
+                                android:text="@{String.valueOf(videoModel.consumption.replyCount)}"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_13" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:background="@android:color/white" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/dp_10"
+                            android:paddingBottom="@dimen/dp_10">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/iv_video_author"
+                                android:layout_width="@dimen/dp_40"
+                                android:layout_height="@dimen/dp_40"
+                                android:layout_marginStart="@dimen/dp_10"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:shapeAppearance="@style/circleStyle"
+                                bind:url="@{videoModel.author.icon}" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_video_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:text="@{String.valueOf(videoModel.author.name)}"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_15"
+                                app:layout_constraintLeft_toRightOf="@id/iv_video_author"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:text="@{String.valueOf(videoModel.author.description)}"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_13"
+                                app:layout_constraintHorizontal_weight="1"
+                                app:layout_constraintLeft_toRightOf="@id/iv_video_author"
+                                app:layout_constraintRight_toLeftOf="@id/btn_follow"
+                                app:layout_constraintTop_toBottomOf="@id/tv_video_title" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_follow"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="@dimen/dp_50"
+                                android:layout_height="@dimen/dp_30"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:insetTop="@dimen/dp_0"
+                                android:insetBottom="@dimen/dp_0"
+                                android:padding="@dimen/dp_0"
+                                android:text="@string/discover_add_follow"
+                                android:textColor="@color/color_grey"
+                                android:textSize="@dimen/sp_12"
+                                android:textStyle="bold"
+                                app:backgroundTint="@android:color/white"
+                                app:cornerRadius="@dimen/dp_5"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@android:color/white" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_video_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+</layout>
