@@ -9,11 +9,14 @@ import retrofit2.http.GET
  *      @author hurley
  *      date    : 4/1/21 8:44 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 通知消息的请求 API 地址
  * </pre>
  */
 interface NotificationApi {
 
+    /**
+     * 获取推送的消息列表
+     */
     @GET("v3/messages")
     suspend fun getPushList(): PushModel
 }

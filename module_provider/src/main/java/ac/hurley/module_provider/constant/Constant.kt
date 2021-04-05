@@ -17,6 +17,8 @@ object Constant {
     const val WATCH_VIDEO_EVENT = "watch_video_event"
     const val VIDEO_AUTO_PLAY_EVENT = "video_auto_play_event"
 
+    const val BASE_URL = "http://baobab.kaiyanapp.com/api/"
+
     const val USER_AGREEMENT = "http://www.eyepetizer.net/agreement.html"
 
     const val LEGAL_NOTICES = "http://www.kaiyanapp.com/legal_notices.html"

@@ -15,7 +15,7 @@ import com.blankj.utilcode.util.StringUtils.getString
  *      @author hurley
  *      date    : 3/30/21 9:30 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 设置的 ViewModel 类
  * </pre>
  */
 class SettingViewModel : ViewModel() {

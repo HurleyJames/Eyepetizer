@@ -11,7 +11,7 @@ import androidx.lifecycle.LiveData
  *      @author hurley
  *      date    : 4/3/21 3:24 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 视频 ViewModel 类
  * </pre>
  */
 class VideoViewModel : BaseViewModel() {

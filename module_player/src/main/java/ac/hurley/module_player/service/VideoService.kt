@@ -9,7 +9,7 @@ import retrofit2.Retrofit
  *      @author hurley
  *      date    : 4/3/21 3:23 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 视频 Service 类
  * </pre>
  */
 object VideoService : VideoApi by RetrofitClient.instance.create(VideoApi::class.java)

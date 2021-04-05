@@ -19,6 +19,7 @@ import java.lang.reflect.ParameterizedType
  *      desc    : MVVM 模式下的 Activity 的基类
  * </pre>
  */
+@Suppress("UNCHECKED_CAST")
 abstract class BaseMVVMActivity<VM : BaseViewModel> : AppCompatActivity() {
 
     abstract val getLayoutRes: Int
@@ -36,23 +37,33 @@ abstract class BaseMVVMActivity<VM : BaseViewModel> : AppCompatActivity() {
         initEvent()
     }
 
+    /**
+     * 设置页面布局
+     */
     open fun setLayout() {
         setContentView(getLayoutRes)
     }
 
+    /**
+     * 初始化 ViewModel
+     */
     private fun initViewModel() {
         val parameterizedType = javaClass.genericSuperclass as ParameterizedType
         mViewModel = ViewModelProvider(this)[parameterizedType.actualTypeArguments[0] as Class<VM>]
         mViewModel.mStateLiveData.observe(this) { state ->
             when (state) {
                 LoadState -> {
+                    // 加载状态显示进度条
                     showLoading()
                 }
                 SuccessState -> {
+                    // 请求成功状态隐藏进度条
                     hideLoading()
                 }
                 is ErrorState -> {
+                    // 请求失败，隐藏进度条
                     hideLoading()
+                    // 弹出错误信息
                     state.errorMsg?.let { errorToast(it) }
                     handleError()
                 }

@@ -12,7 +12,7 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
  *      @author hurley
  *      date    : 4/4/21 10:32 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 相关视频的标题适配器
  * </pre>
  */
 class RelateVideoTitleProvider : BaseItemProvider<Item>() {

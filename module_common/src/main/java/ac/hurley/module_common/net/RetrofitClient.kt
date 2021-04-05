@@ -1,8 +1,8 @@
 package ac.hurley.module_common.net
 
+import ac.hurley.module_common.BuildConfig
 import ac.hurley.module_common.global.ConfigKeys
 import ac.hurley.module_common.global.Configurator
-import cn.jzvd.BuildConfig
 import com.blankj.utilcode.util.LogUtils
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -29,7 +29,7 @@ class RetrofitClient private constructor() {
         val holder = RetrofitClient()
     }
 
-    private val httpLoggintInterceptor =
+    private val httpLoggingInterceptor =
         HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger {
             override fun log(message: String) {
                 LogUtils.e(message)
@@ -42,7 +42,7 @@ class RetrofitClient private constructor() {
     private val okHttpClient = OkHttpClient.Builder()
         .also {
             if (BuildConfig.DEBUG) {
-                it.addInterceptor(httpLoggintInterceptor)
+                it.addInterceptor(httpLoggingInterceptor)
             }
         }
         .build()

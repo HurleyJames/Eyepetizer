@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.discover_list_fragment.*
  *      @author hurley
  *      date    : 3/30/21 2:04 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 发现界面列表的父类（因为多个 Tab 对应的 Fragment 是一样的，所以都继承至该类）
  * </pre>
  */
 abstract class DiscoverListFragment<VM : DiscoverListViewModel, T> : BaseMVVMFragment<VM>(),

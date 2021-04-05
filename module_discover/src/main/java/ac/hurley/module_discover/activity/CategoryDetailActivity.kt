@@ -1,6 +1,7 @@
 package ac.hurley.module_discover.activity
 
 import ac.hurley.module_common.base.activity.BaseBindActivity
+import ac.hurley.module_common.ext.commonMaterialContainerTransform
 import ac.hurley.module_common.util.immersionStatusBar
 import ac.hurley.module_common.util.setToolBar
 import ac.hurley.module_discover.R
@@ -54,6 +55,11 @@ class CategoryDetailActivity :
     override val getLayoutRes: Int
         get() = R.layout.discover_category_detail_activity
 
+    override fun initWindow() {
+        // 添加过渡动画
+        commonMaterialContainerTransform()
+    }
+
     override fun initView() {
         immersionStatusBar()
         setToolBar(tl_discover_category)
@@ -70,6 +76,7 @@ class CategoryDetailActivity :
         mId = intent.getIntExtra(ID, 0)
         mBind.title = intent.getStringExtra(TITLE).toString()
         mBind.headerImage = intent.getStringExtra(HEADER_IMAGE).toString()
+        // 获取分类下的具体数据
         getCategoryDetail(mId)
     }
 
@@ -78,7 +85,7 @@ class CategoryDetailActivity :
     }
 
     /**
-     * 获取某个分类下的具体数据
+     * 通过分类 ID，获取某个分类下的具体数据
      */
     private fun getCategoryDetail(id: Int = -1) {
         mViewModel.getCategoryDetailList(id).observe(this) {

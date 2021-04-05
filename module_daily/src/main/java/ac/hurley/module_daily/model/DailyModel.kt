@@ -7,7 +7,7 @@ import ac.hurley.module_provider.model.Issue
  *      @author hurley
  *      date    : 3/28/21 2:40 PM
  *      github  : https://github.com/HurleyJames
- *      desc    : 日报的实体类的最外层
+ *      desc    : 日报的实体类的最外层（因为内部类通用，所以提取出来）
  * </pre>
  */
 

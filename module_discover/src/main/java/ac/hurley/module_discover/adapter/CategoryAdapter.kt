@@ -18,7 +18,6 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
 class CategoryAdapter :
     BaseQuickAdapter<CategoryModel, BaseViewHolder>(R.layout.discover_category_item) {
 
-
     override fun convert(holder: BaseViewHolder, item: CategoryModel) {
         val bindingHolder = BaseDataBindingHolder<DiscoverCategoryItemBinding>(holder.itemView)
         bindingHolder.dataBinding?.categoryModel = item

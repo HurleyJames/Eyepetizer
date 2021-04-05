@@ -1,6 +1,6 @@
 package ac.hurley.module_common.util
 
-import ac.hurley.module_common.base.app.AppGlobal
+import ac.hurley.module_common.base.app.GlobalApplication
 import com.sdsmdg.tastytoast.TastyToast
 
 /**
@@ -16,7 +16,7 @@ import com.sdsmdg.tastytoast.TastyToast
  * 信息的 Toast
  */
 fun infoToast(message: String) {
-    AppGlobal.get()?.let {
+    GlobalApplication.get()?.let {
         TastyToast.makeText(it, message, TastyToast.LENGTH_LONG, TastyToast.INFO)
     }
 }
@@ -25,7 +25,7 @@ fun infoToast(message: String) {
  * 错误的 Toast
  */
 fun errorToast(message: String) {
-    AppGlobal.get()?.let {
+    GlobalApplication.get()?.let {
         TastyToast.makeText(it, message, TastyToast.LENGTH_LONG, TastyToast.ERROR)
     }
 }

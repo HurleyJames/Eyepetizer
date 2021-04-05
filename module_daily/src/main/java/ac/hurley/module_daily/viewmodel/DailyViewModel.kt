@@ -10,7 +10,7 @@ import androidx.lifecycle.LiveData
  *      @author hurley
  *      date    : 3/25/21 2:03 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 日报 ViewModel 类
  * </pre>
  */
 class DailyViewModel : BaseViewModel() {
@@ -26,8 +26,11 @@ class DailyViewModel : BaseViewModel() {
      * 获取日报轮播图
      */
     fun getDailyBanner(): LiveData<TypeMultiModel> = liveDataEx {
+        // 请求轮播图的数据
         val dailyModel = DailyService.getDailyBanner()
+        // 获得数据中下一页地址
         mNextPageUrl = dailyModel.nextPageUrl
+        // 获取第一页的数据，以轮播图的形式展示
         val list = dailyModel.issueList[0].itemList
         list.removeAll {
             it.type == BANNER_TYPE

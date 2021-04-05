@@ -8,7 +8,7 @@ import ac.hurley.module_hot.api.HotApi
  *      @author hurley
  *      date    : 3/29/21 5:16 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 热门 Service 类
  * </pre>
  */
 

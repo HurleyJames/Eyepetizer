@@ -12,4 +12,6 @@
     <string name="icon_common_back_text">&#xe635;</string>
 
     <string name="feature_not_supported">该功能即将开发，敬请期待</string>
+
+    <string name="shared_element_container">shared_element_container</string>
 </resources>

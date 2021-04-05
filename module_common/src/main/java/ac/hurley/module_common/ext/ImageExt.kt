@@ -12,12 +12,13 @@ import com.blankj.utilcode.util.ConvertUtils.dp2px
  *      @author hurley
  *      date    : 3/28/21 8:55 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 图片拓展类
  * </pre>
  */
 
 @BindingAdapter(
-    value = ["url", "showLoading", "strokeWidth", "centerRedius", "allowHardware"],
+    // 使用 bind:url 的方式加载图片
+    value = ["url", "showLoading", "strokeWidth", "centerRadius", "allowHardware"],
     requireAll = false
 )
 fun ImageView.loadUrl(

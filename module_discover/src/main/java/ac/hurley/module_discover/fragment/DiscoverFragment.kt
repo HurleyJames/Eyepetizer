@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.discover_fragment.*
  *      @author hurley
  *      date    : 3/25/21 2:38 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 发现界面
  * </pre>
  */
 @Route(path = RouterPath.Discover.PATH_DISCOVER_HOME)
@@ -36,6 +36,7 @@ class DiscoverFragment : BaseFragment() {
         get() = R.layout.discover_fragment
 
     override fun initView() {
+        // 绑定 ViewPager 与 Tab
         vp_discover.adapter = object :
             FragmentStatePagerAdapter(childFragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 

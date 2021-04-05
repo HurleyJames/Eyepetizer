@@ -14,7 +14,7 @@ import androidx.lifecycle.LiveData
  *      @author hurley
  *      date    : 3/30/21 1:20 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 分类的 ViewModel 类
  * </pre>
  */
 class CategoryViewModel : BaseViewModel() {

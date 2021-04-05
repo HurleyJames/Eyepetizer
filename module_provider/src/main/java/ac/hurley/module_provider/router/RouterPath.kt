@@ -5,7 +5,7 @@ package ac.hurley.module_provider.router
  *      @author hurley
  *      date    : 3/25/21 10:55 AM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : ARouter 跳转路径
  * </pre>
  */
 

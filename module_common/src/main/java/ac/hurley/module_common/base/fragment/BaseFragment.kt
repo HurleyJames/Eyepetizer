@@ -29,6 +29,9 @@ abstract class BaseFragment : Fragment() {
      */
     private var mHasLoadData = false
 
+    /**
+     * 绑定 Fragment 到 Activity
+     */
     override fun onAttach(context: Context) {
         super.onAttach(context)
         mActivity = context as Activity

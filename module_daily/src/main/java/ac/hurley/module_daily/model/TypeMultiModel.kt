@@ -8,7 +8,7 @@ import androidx.annotation.IntDef
  *      @author hurley
  *      date    : 3/28/21 3:34 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 多个种类的实体类
  * </pre>
  */
 class TypeMultiModel(
@@ -16,6 +16,7 @@ class TypeMultiModel(
     val item: Item? = null,
     val items: List<Item> = mutableListOf()
 ) {
+    // 轮播图 | 标题 | 头像图片
     @IntDef(value = [Type.TYPE_BANNER, Type.TYPE_TITLE, Type.TYPE_IMAGE])
     @Target(AnnotationTarget.VALUE_PARAMETER)
     @Retention(AnnotationRetention.SOURCE)

@@ -11,7 +11,7 @@ import com.blankj.utilcode.util.LogUtils
  *      @author hurley
  *      date    : 4/1/21 8:53 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 通知消息的 ViewModel 类
  * </pre>
  */
 class NotificationViewModel : BaseViewModel() {

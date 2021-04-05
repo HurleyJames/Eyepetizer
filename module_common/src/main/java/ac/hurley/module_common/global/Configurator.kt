@@ -5,7 +5,7 @@ package ac.hurley.module_common.global
  *      @author hurley
  *      date    : 3/24/21 10:41 AM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 配置类
  * </pre>
  */
 class Configurator private constructor() {

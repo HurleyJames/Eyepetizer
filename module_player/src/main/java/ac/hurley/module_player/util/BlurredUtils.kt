@@ -7,7 +7,7 @@ import com.blankj.utilcode.util.ScreenUtils
  *      @author hurley
  *      date    : 4/3/21 4:26 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 高斯模糊的工具类
  * </pre>
  */
 

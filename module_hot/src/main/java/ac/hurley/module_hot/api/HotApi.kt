@@ -15,9 +15,15 @@ import retrofit2.http.Url
  */
 interface HotApi {
 
+    /**
+     * 获取热门列表的分类（周排行 | 月排行 | 总排行）
+     */
     @GET("v4/rankList")
     suspend fun getHotTabs(): TabInfo
 
+    /**
+     * 获取热门列表分类下的具体数据
+     */
     @GET
     suspend fun getRankList(@Url url: String): Issue
 }

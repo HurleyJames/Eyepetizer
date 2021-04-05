@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.user_setting_activity.*
  *      @author hurley
  *      date    : 3/30/21 11:55 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 设置界面
  * </pre>
  */
 @Route(path = RouterPath.User.PATH_USER_SETTING)

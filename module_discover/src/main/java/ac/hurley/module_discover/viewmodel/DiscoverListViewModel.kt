@@ -8,7 +8,7 @@ import androidx.lifecycle.LiveData
  *      @author hurley
  *      date    : 3/30/21 2:05 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 发现列表的 ViewModel 类
  * </pre>
  */
 abstract class DiscoverListViewModel : BaseViewModel() {

@@ -16,6 +16,7 @@ fun AppCompatActivity.setToolBar(toolbar: Toolbar) {
     setSupportActionBar(toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
     supportActionBar?.setHomeButtonEnabled(true)
+    // 设置返回
     toolbar.setNavigationOnClickListener {
         onBackPressed()
     }
@@ -29,5 +30,6 @@ fun AppCompatActivity.setToolBar(toolbar: Toolbar, title: String) {
     toolbar.setNavigationOnClickListener {
         onBackPressed()
     }
+    // 设置 ToolBar 的标题
     toolbar.title = title
 }

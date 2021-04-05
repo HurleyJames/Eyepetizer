@@ -12,7 +12,7 @@ import retrofit2.http.Url
  *      @author hurley
  *      date    : 3/25/21 2:35 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 热门 ViewModel 类
  * </pre>
  */
 class HotViewModel : BaseViewModel() {

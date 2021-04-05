@@ -27,6 +27,9 @@ class DailyFragment : BaseMVVMFragment<DailyViewModel>() {
      */
     private var mIsLoadMore = false
 
+    /**
+     * 日报适配器类
+     */
     private val mAdapter: DailyAdapter by lazy { DailyAdapter(mActivity, this) }
 
     override val getLayoutRes: Int
@@ -34,6 +37,7 @@ class DailyFragment : BaseMVVMFragment<DailyViewModel>() {
 
     override fun initView() {
         srl_daily.isRefreshing = true
+        // 刷新
         srl_daily.setOnRefreshListener {
             mIsLoadMore = false
             lazyLoadData()
@@ -41,6 +45,7 @@ class DailyFragment : BaseMVVMFragment<DailyViewModel>() {
         rv_daily.layoutManager = LinearLayoutManager(context)
         rv_daily.adapter = mAdapter
 
+        // 加载更多
         mAdapter.loadMoreModule.setOnLoadMoreListener {
             mIsLoadMore = true
             getDailyList()
@@ -62,8 +67,10 @@ class DailyFragment : BaseMVVMFragment<DailyViewModel>() {
         }
     }
 
+    /**
+     * 获取日报列表数据
+     */
     private fun getDailyList() {
-        // 获取日报列表数据
         mViewModel.getDailyList().observe(viewLifecycleOwner) {
             if (it.isNotEmpty()) {
                 if (mIsLoadMore) {

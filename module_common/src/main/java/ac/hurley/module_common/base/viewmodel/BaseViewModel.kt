@@ -48,8 +48,12 @@ open class BaseViewModel : ViewModel() {
     }.asLiveData()
 }
 
-// 使用密封类的时候，用 when 子句不用添加 else 子句
+// 使用密封类的时候，用 when 子句可以不用添加 else 子句
 sealed class State
+
+// 加载状态类继承至状态类
 object LoadState : State()
+// 成功状态类继承至状态类
 object SuccessState : State()
+// 错误状态类继承至状态类
 class ErrorState(val errorMsg: String?) : State()

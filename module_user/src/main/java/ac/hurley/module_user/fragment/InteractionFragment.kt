@@ -8,7 +8,7 @@ import ac.hurley.module_user.R
  *      @author hurley
  *      date    : 4/1/21 4:40 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 互动界面
  * </pre>
  */
 class InteractionFragment : BaseFragment() {

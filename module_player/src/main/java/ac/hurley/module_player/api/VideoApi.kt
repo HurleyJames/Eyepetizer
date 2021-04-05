@@ -9,7 +9,7 @@ import retrofit2.http.Query
  *      @author hurley
  *      date    : 4/3/21 3:21 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 播放器界面的请求 API 地址
  * </pre>
  */
 interface VideoApi {

@@ -15,7 +15,7 @@ import com.just.agentweb.WebViewClient
  *      @author hurley
  *      date    : 3/31/21 11:24 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : AgentWeb 观察器类
  * </pre>
  */
 class AgentWebObserver(private val container: LinearLayout, private val mActivity: Activity) :
@@ -24,6 +24,7 @@ class AgentWebObserver(private val container: LinearLayout, private val mActivit
     lateinit var mAgentWeb: AgentWeb
 
     override fun onCreate(owner: LifecycleOwner) {
+        // AgentWeb 基本使用方法
         mAgentWeb = AgentWeb.with(mActivity)
             .setAgentWebParent(container, LinearLayout.LayoutParams(-1, -1))
             .useDefaultIndicator()

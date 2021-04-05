@@ -8,7 +8,7 @@ import ac.hurley.module_user.api.NotificationApi
  *      @author hurley
  *      date    : 4/1/21 8:56 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 通知消息 Service 类
  * </pre>
  */
 

@@ -7,7 +7,7 @@ import ac.hurley.module_discover.service.DiscoverService
  *      @author hurley
  *      date    : 3/30/21 8:05 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 专题的 ViewModel 类
  * </pre>
  */
 class TopicViewModel : DiscoverListViewModel() {

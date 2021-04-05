@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment
  *      @author hurley
  *      date    : 4/1/21 4:40 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 私信界面
  * </pre>
  */
 class InboxFragment : BaseFragment() {

@@ -9,7 +9,7 @@ import com.chad.library.adapter.base.BaseProviderMultiAdapter
  *      @author hurley
  *      date    : 4/3/21 11:36 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 相关视频适配器类
  * </pre>
  */
 class RelateVideoAdapter(mActivity: Activity) : BaseProviderMultiAdapter<Item>() {

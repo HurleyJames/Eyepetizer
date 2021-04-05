@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.notification_push_fragment.*
  *      @author hurley
  *      date    : 4/1/21 4:40 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 推送界面
  * </pre>
  */
 class PushFragment : BaseMVVMFragment<NotificationViewModel>() {

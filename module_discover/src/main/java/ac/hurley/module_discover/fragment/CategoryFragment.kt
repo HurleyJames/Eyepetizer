@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.discover_category_fragment.*
  *      @author hurley
  *      date    : 3/30/21 1:14 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 分类界面
  * </pre>
  */
 class CategoryFragment : BaseMVVMFragment<CategoryViewModel>(), OnItemClickListener {
@@ -34,6 +34,7 @@ class CategoryFragment : BaseMVVMFragment<CategoryViewModel>(), OnItemClickListe
         srl_discover_category.setOnRefreshListener {
             initData()
         }
+        // 网格布局
         rv_discover_category.layoutManager = GridLayoutManager(context, 2)
         mAdapter.setOnItemClickListener(this)
         rv_discover_category.adapter = mAdapter

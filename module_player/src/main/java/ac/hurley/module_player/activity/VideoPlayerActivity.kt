@@ -40,7 +40,7 @@ import kotlinx.android.synthetic.main.video_player_activity.*
  *      @author hurley
  *      date    : 4/3/21 4:29 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 播放视频界面
  * </pre>
  */
 @Route(path = RouterPath.Video.PATH_VIDEO_HOME)
@@ -71,7 +71,6 @@ class VideoPlayerActivity : BaseBindActivity<VideoViewModel, VideoPlayerActivity
         get() = R.layout.video_player_activity
 
     override fun initView() {
-        // TODO 沉浸式状态栏
         ImmersionBar.with(this).init()
 
         srl_video_player.setOnRefreshListener {

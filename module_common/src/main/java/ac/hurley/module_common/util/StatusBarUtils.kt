@@ -11,7 +11,7 @@ import com.gyf.immersionbar.ktx.immersionBar
  *      @author hurley
  *      date    : 3/25/21 10:31 AM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 状态栏工具类
  * </pre>
  */
 

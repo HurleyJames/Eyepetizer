@@ -9,11 +9,11 @@ import android.content.Context
  *      @author hurley
  *      date    : 3/24/21 12:02 AM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 全局 Application 类
  * </pre>
  */
 
-object AppGlobal {
+object GlobalApplication {
 
     private var mApplication: Application? = null
         @SuppressLint("PrivateApi")

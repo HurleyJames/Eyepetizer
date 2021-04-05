@@ -47,6 +47,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_activity)
 
+        // 沉浸式状态栏
         immersionStatusBar(true, android.R.color.white, true, 0.2f)
         initBottomNavigation()
         initViewModel()

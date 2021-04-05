@@ -14,7 +14,7 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
  *      @author hurley
  *      date    : 4/4/21 10:35 PM
  *      github  : https://github.com/HurleyJames
- *      desc    :
+ *      desc    : 相关视频的具体视频显示适配器类
  * </pre>
  */
 class RelateVideoItemProvider(private val mActivity: Activity) : BaseItemProvider<Item>() {

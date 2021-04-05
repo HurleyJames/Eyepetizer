@@ -1,5 +1,6 @@
 package ac.hurley.module_common.util
 
+import android.annotation.SuppressLint
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -11,7 +12,7 @@ import java.util.*
  *      desc    : 日期工具类
  * </pre>
  */
-
+@SuppressLint("SimpleDateFormat")
 object DateUtils {
 
     fun formatDateMsByMs(milliseconds: Long): String {

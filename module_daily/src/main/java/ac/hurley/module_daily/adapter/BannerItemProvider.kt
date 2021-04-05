@@ -49,8 +49,10 @@ class BannerItemProvider(private val owner: LifecycleOwner, private val activity
             banner.apply {
                 adapter = BannerImageAdapter(banner.context, data.items)
                 addBannerLifecycleObserver(owner)
+                // 圆形指示器
                 indicator = CircleIndicator(banner.context)
                 setOnBannerListener { _, position ->
+                    // 跳转到视频播放界面
                     jumpToVideoPlayer(activity, null, data.items[position].data, true)
                 }
             }
