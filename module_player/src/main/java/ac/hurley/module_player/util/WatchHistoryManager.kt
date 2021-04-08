@@ -16,6 +16,7 @@ import com.tencent.mmkv.MMKV
  */
 
 object WatchHistoryManager {
+
     private val mmkv = MMKV.defaultMMKV()
     private val WATCH_HISTORY = "video_history"
 

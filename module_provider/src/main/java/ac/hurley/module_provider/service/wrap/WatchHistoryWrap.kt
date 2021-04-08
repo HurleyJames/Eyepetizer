@@ -17,6 +17,9 @@ import com.alibaba.android.arouter.launcher.ARouter
 
 object WatchHistoryWrap {
 
+    /**
+     * 通过 ARouter，跳转到 Service 的具体实现类
+     */
     @Autowired(name = RouterPath.Video.PATH_VIDEO_WATCH)
     lateinit var mWatchHistoryService: WatchHistoryService
 
@@ -24,9 +27,15 @@ object WatchHistoryWrap {
         ARouter.getInstance().inject(this)
     }
 
+    /**
+     * 获取历史观看记录列表
+     */
     fun getVideoWatchHistoryList(): MutableList<Data> =
         mWatchHistoryService.getVideoWatchHistoryList()
 
+    /**
+     * 移除该历史观看记录
+     */
     fun removeVideoWatchHistory(data: Data) {
         mWatchHistoryService.removeVideoWatchHistory(data)
     }

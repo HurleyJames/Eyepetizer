@@ -103,6 +103,7 @@ class WatchHistoryActivity : AppCompatActivity() {
     }
 
     private fun initEvent() {
+        // 通过 LiveDataBus 监听事件
         LiveDataBus.with<WatchVideoEvent>(Constant.WATCH_VIDEO_EVENT).observe(this) {
             updateWatchRecord()
         }
@@ -115,6 +116,7 @@ class WatchHistoryActivity : AppCompatActivity() {
         // 获取到观看的历史记录列表
         val newDataList = WatchHistoryWrap.getVideoWatchHistoryList()
         lifecycleScope.launch(Dispatchers.IO) {
+            // 判断适配器列表的记录和新获得的历史记录列表是否相同
             val diffResult = DiffUtil.calculateDiff(
                 DiffUtilCallback(
                     mAdapter.mDataList,
