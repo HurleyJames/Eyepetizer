@@ -1,7 +1,7 @@
 package ac.hurley.module_player.adapter
 
 import ac.hurley.module_player.R
-import ac.hurley.module_player.databinding.RelateVideoItemBinding
+import ac.hurley.module_provider.databinding.RelateVideoItemBinding
 import ac.hurley.module_provider.model.Item
 import ac.hurley.module_provider.router.jumpToVideoPlayer
 import android.app.Activity

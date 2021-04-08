@@ -1,4 +1,4 @@
-package ac.hurley.module_provider.player
+package ac.hurley.module_player.observer
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver

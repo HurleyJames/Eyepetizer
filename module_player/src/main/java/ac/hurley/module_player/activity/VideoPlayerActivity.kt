@@ -4,8 +4,10 @@ import ac.hurley.module_common.base.activity.BaseBindActivity
 import ac.hurley.module_player.R
 import ac.hurley.module_player.adapter.RelateVideoAdapter
 import ac.hurley.module_player.databinding.VideoPlayerActivityBinding
+import ac.hurley.module_player.observer.JzvdObserver
 import ac.hurley.module_player.viewmodel.VideoViewModel
-import ac.hurley.module_provider.adapter.TransitionListenerAdapter
+import ac.hurley.module_player.adapter.TransitionListenerAdapter
+import ac.hurley.module_player.util.WatchHistoryManager
 import ac.hurley.module_provider.constant.Constant
 import ac.hurley.module_provider.event.VideoAutoPlayEvent
 import ac.hurley.module_provider.event.WatchVideoEvent
@@ -21,18 +23,15 @@ import android.view.ViewTreeObserver
 import android.widget.FrameLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.isVisible
-import androidx.core.view.postDelayed
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import cn.jzvd.Jzvd
-import cn.jzvd.JzvdStd
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.fmt.livedatabus.LiveDataBus
 import com.google.gson.Gson
 import com.gyf.immersionbar.ImmersionBar
-import com.gyf.immersionbar.ktx.immersionBar
 import kotlinx.android.synthetic.main.video_player_activity.*
 
 /**
@@ -86,6 +85,7 @@ class VideoPlayerActivity : BaseBindActivity<VideoViewModel, VideoPlayerActivity
         videoModel = fromJson(videoModelJson)
         mBind.videoModel = videoModel
         // 添加观看记录
+        WatchHistoryManager.addWatchHistoryRecord(videoModel)
         LiveDataBus.with<WatchVideoEvent>(Constant.WATCH_VIDEO_EVENT).setData(WatchVideoEvent())
 
         // 从自动播放页面进入时

@@ -1,4 +1,4 @@
-package ac.hurley.module_provider.adapter
+package ac.hurley.module_player.adapter
 
 import android.transition.Transition
 

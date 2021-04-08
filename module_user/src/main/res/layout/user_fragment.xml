@@ -162,7 +162,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_50"
                     android:gravity="center|center_horizontal"
-                    android:text="@string/user_view_history"
+                    android:text="@string/user_watch_history"
                     android:textSize="14sp" />
 
                 <TextView

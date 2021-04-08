@@ -1,7 +1,7 @@
 package ac.hurley.module_player.adapter
 
 import ac.hurley.module_player.R
-import ac.hurley.module_player.databinding.RelateVideoTitleItemBinding
+import ac.hurley.module_provider.databinding.RelateVideoTitleItemBinding
 import ac.hurley.module_provider.model.Item
 import com.chad.library.adapter.base.provider.BaseItemProvider
 import com.chad.library.adapter.base.viewholder.BaseDataBindingHolder

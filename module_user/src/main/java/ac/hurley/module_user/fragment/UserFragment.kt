@@ -1,6 +1,7 @@
 package ac.hurley.module_user.fragment
 
 import ac.hurley.module_provider.router.RouterPath
+import ac.hurley.module_user.activity.WatchHistoryActivity
 import ac.hurley.module_user.databinding.UserFragmentBinding
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -35,6 +36,11 @@ class UserFragment : Fragment() {
         // 点击通知
         iv_user_notifications.setOnClickListener {
             ARouter.getInstance().build(RouterPath.User.PATH_USER_NOTIFICATION).navigation()
+        }
+
+        // 点击观看记录
+        tv_watch_history.setOnClickListener {
+            context?.let { context -> WatchHistoryActivity.start(context) }
         }
 
         // 点击设置
